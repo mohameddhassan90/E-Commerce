@@ -9,7 +9,8 @@ export async function addToCart(productId: string) {
             message: "Need To SignIn"
         };
     }
-    try {
+    if(token){
+        try {
         const data = await fetch(`${process.env.API}cart`, {
             method: "POST",
             body: JSON.stringify({ productId }),
@@ -25,5 +26,6 @@ export async function addToCart(productId: string) {
         return response
     } catch (error: any) {
         throw new Error(error?.message)
+    }
     }
 }

@@ -10,21 +10,24 @@ export async function removeFavorite(productId: string) {
             message: "Need To SignIn",
         };
     }
+    if (token) {
+        try {
+            const data = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`, {
+                method: "DELETE",
+                headers: {
+                    token: token,
+                }
+            })
 
-    try {
-        const data = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`, {
-            method: "DELETE",
-            headers: {
-                token: token,
-            }
-        })
+            if (!data?.ok)
+                throw new Error(data?.statusText)
 
-        if (!data?.ok)
-            throw new Error(data?.statusText)
-
-        const response = await data.json()
-        return response
-    } catch (error: any) {
-        throw new Error(error?.message)
+            const response = await data.json()
+            return response
+        } catch (error: any) {
+            throw new Error(error?.message)
+        }
     }
+
+
 }
