@@ -1,11 +1,14 @@
 "use server"
-import { toast } from "sonner";
 import { getTokenFn } from "../../../../utilities/getToken";
 
 export async function addFavorite(productId: string) {
     const token = await getTokenFn()
-    if (!token)
-        throw new Error("Need To SignIn")
+    if (!token) {
+        return {
+            success: false,
+            message: "Need To SignIn",
+        };
+    }
     try {
         const data = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
             method: "POST",

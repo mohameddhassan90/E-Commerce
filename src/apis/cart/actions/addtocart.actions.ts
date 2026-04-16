@@ -1,12 +1,13 @@
 "use server"
-import { toast } from "sonner";
 import { getTokenFn } from "../../../../utilities/getToken";
 
 export async function addToCart(productId: string) {
     const token = await getTokenFn()
-    if (!token)
-    {
-        alert("Need To SignIn")
+    if (!token) {
+        return {
+            success: false,
+            message: "Need To SignIn"
+        };
     }
     try {
         const data = await fetch(`${process.env.API}cart`, {
