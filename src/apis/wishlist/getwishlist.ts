@@ -11,7 +11,7 @@ export async function getWishlist() {
     try {
         const data = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, { headers: { token: token }, cache: "no-store" })
 
-        if (!data.ok)
+        if (!data)
             return [];
 
         const response: { data: ProductInterFace[] } = await data.json()
