@@ -51,6 +51,7 @@ export default function ProductItem({
         position: "top-center",
         style: { backgroundColor: "#16A34A", color: "#fff" },
       });
+      queryClient.invalidateQueries({ queryKey: ["wishlist"] })
     } catch (error: any) {
       toast.error(error, {
         position: "top-center",
