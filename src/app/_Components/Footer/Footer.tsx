@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -266,52 +267,52 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-5">Shop</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/products"
+                  href="/shop"
                 >
                   All Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/categories"
                 >
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/brands"
                 >
                   Brands
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/products?category=6439d58a0049ad0b52b9003f"
+                  href="/categories"
                 >
                   Electronics
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/products?category=6439d2d167d9aa4ca970649f"
+                  href="/categories"
                 >
                   Men's Fashion
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/products?category=6439d5b90049ad0b52b90048"
+                  href="/categories"
                 >
                   Women's Fashion
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -319,52 +320,52 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-5">Account</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/profile"
                 >
                   My Account
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/profile/orders"
+                  href="/allorders"
                 >
                   Order History
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/wishlist"
                 >
                   Wishlist
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/cart"
                 >
                   Shopping Cart
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/login"
+                  href="/signin"
                 >
                   Sign In
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/register"
+                  href="/signup"
                 >
                   Create Account
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -372,44 +373,20 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-5">Support</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/contact"
+                  href="/support"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/help"
+                  href="/support"
                 >
                   Help Center
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/shipping"
-                >
-                  Shipping Info
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/returns"
-                >
-                  Returns &amp; Refunds
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/track-order"
-                >
-                  Track Order
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -417,28 +394,20 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-5">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/privacy"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                   href="/terms"
                 >
                   Terms of Service
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  href="/cookies"
-                >
-                  Cookie Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
